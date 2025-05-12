@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DJ Skins | Customize Your Gear</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Animate CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- WOW JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">DJ Skins</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#shop">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="cart.html">
+              Cart 🛒 <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="admin.html">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Hero -->
+<section class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Customize Your DJ Gear</h1>
+      <p class="lead">Stand out with premium skins for turntables, mixers, and more.</p>
+      <a href="#shop" class="btn btn-primary btn-lg mt-3">Browse Skins</a>
+    </div>
+  </section>
+  
+
+  <!-- Products Section with Category Filter -->
+<section id="shop" class="container py-5">
+    <h2 class="text-center mb-4">Shop by Category</h2>
+  
+    <!-- Category Filters -->
+    <div class="d-flex justify-content-center mb-4 flex-wrap gap-2">
+      <button class="btn btn-outline-light category-btn active" data-category="all">All</button>
+      <button class="btn btn-outline-light category-btn" data-category="turntable">Turntables</button>
+      <button class="btn btn-outline-light category-btn" data-category="mixer">Mixers</button>
+      <button class="btn btn-outline-light category-btn" data-category="headphone">Headphones</button>
+    </div>
+  
+    <!-- Search and Sort -->
+<div class="row justify-content-center mb-4">
+    <div class="col-md-6">
+      <input type="text" id="search-bar" class="form-control mb-2" placeholder="Search for DJ skins..." />
+    </div>
+    <div class="col-md-3">
+      <select id="sort-select" class="form-select">
+        <option value="">Sort By</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+      </select>
+    </div>
+  </div>
+  
+    <!-- Product Grid -->
+    <div class="row g-4 text-center" id="product-list">
+        <div class="col-lg-4 col-md-12 product-card" data-category="turntable" data-name="Neon Turntable Skin" data-price="39.99">
+        <div class="card bg-black text-white border border-secondary h-100">
+          <img src="Images/Neon turntable skin.jpg" class="card-img-top" alt="Turntable Skin" />
+          <div class="card-body">
+            <h5 class="card-title">Neon Turntable Skin</h5>
+            <p>$39.99</p>
+            <button class="btn btn-outline-light add-to-cart" data-name="Neon Turntable" data-price="39.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 product-card" data-category="mixer" data-name="Galaxy Mixer Skin" data-price="29.99">
+        <div class="card bg-black text-white border border-secondary h-100">
+          <img src="Images/Galaxy Wrap mixer.jpg" class="card-img-top" alt="Mixer Skin" />
+          <div class="card-body">
+            <h5 class="card-title">Galaxy Mixer Wrap</h5>
+            <p>$29.99</p>
+            <button class="btn btn-outline-light add-to-cart" data-name="Galaxy Mixer" data-price="29.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 product-card" data-category="headphone" data-name="Urban Headphone Skin" data-price="19.99">
+        <div class="card bg-black text-white border border-secondary h-100">
+            <img src="Images/Urban Headphone Wrap.jpg" class="card-img-top" alt="Headphone Skin" />
+          <div class="card-body">
+            <h5 class="card-title">Urban Headphone Wrap</h5>
+            <p>$19.99</p>
+            <button class="btn btn-outline-light add-to-cart" data-name="Headphone Wrap" data-price="19.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+  
+      products.forEach(p => {
+        const productCard = `
+          <div class="col-lg-4 product-card" data-category="${p.category}" data-name="${p.name}" data-price="${p.price}">
+            <div class="card bg-black text-white border border-secondary h-100">
+              <img src="${p.image}" class="card-img-top" alt="${p.name}" />
+              <div class="card-body">
+                <h5 class="card-title">${p.name}</h5>
+                <p>$${p.price}</p>
+                <button class="btn btn-outline-light add-to-cart" data-name="${p.name}" data-price="${p.price}">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        `;
+        document.getElementById('product-list').insertAdjacentHTML('beforeend', productCard);
+      });
+    });
+  </script>
+  
+
+ <!-- Features Section -->
+<section class="features py-5 text-center">
+  <div class="container">
+    <h2 class="mb-5">Why Customize Your DJ Gear?</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item p-4 h-100 border rounded shadow-sm wow fadeInUp">
+          <div class="mb-3 display-4 text-dark">🌟</div>
+          <h5 class="mb-3">Stand Out on Stage</h5>
+          <p>Make a visual impact that matches your sound. Custom skins create a unique identity for your setup.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item p-4 h-100 border rounded shadow-sm wow fadeInUp" data-wow-delay="0.2s">
+          <div class="mb-3 display-4 text-dark">🛡️</div>
+          <h5 class="mb-3">Protect Your Equipment</h5>
+          <p>Durable vinyl wraps shield your gear from scratches, spills, and dust — keeping it clean and pro.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item p-4 h-100 border rounded shadow-sm wow fadeInUp" data-wow-delay="0.4s">
+          <div class="mb-3 display-4 text-dark">🎨</div>
+          <h5 class="mb-3">Express Your Vibe</h5>
+          <p>Your gear, your style. From bold patterns to personal logos, express yourself every time you spin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us Section -->
+<section class="why-choose-us py-5 text-white">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Choose Us?</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="choose-box p-4 rounded bg-secondary h-100 shadow-sm">
+          <h4>✔ 100% Authentic Materials</h4>
+          <p>We use premium-grade vinyl that’s both durable and easy to apply — guaranteed to last through your wildest sets.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="choose-box p-4 rounded bg-secondary h-100 shadow-sm">
+          <h4>🎧 Designed by DJs, for DJs</h4>
+          <p>Our team understands what performance gear needs — we’re not just sellers, we’re selectors too.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="choose-box p-4 rounded bg-secondary h-100 shadow-sm">
+          <h4>🎨 Limitless Custom Options</h4>
+          <p>Upload your own artwork, choose from exclusive collabs, or let us design your next signature look.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="choose-box p-4 rounded bg-secondary h-100 shadow-sm">
+          <h4>🚚 Fast Shipping & Support</h4>
+          <p>No delays. No ghosting. Get your custom gear fast and talk to real people when you need help.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="gallery-preview py-5 text-center">
+                  <div class="container">
+                    <h2 class="mb-4">Gear in Action</h2>
+                    <div class="row g-3">
+                      <div class="col-lg-4 col-md-6">
+                        <a href="images/gallery1.jpg" class="lightbox-trigger">
+                          <img src="Images/gal 1.jpg" class="img-fluid rounded" alt="Setup 1">
+                        </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <a href="images/gallery2.jpg" class="lightbox-trigger">
+                          <img src="Images/gal 2.jpg" class="img-fluid rounded" alt="Setup 2">
+                        </a>
+                      </div>
+                      <div class="col-lg-4 col-md-6">
+                        <a href="images/gallery3.jpg" class="lightbox-trigger">
+                          <img src="Images/gal 3.jpg" class="img-fluid rounded" alt="Setup 3">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <!-- Lightbox Overlay -->
+                <div id="lightbox" class="lightbox">
+                  <span class="close">&times;</span>
+                  <img class="lightbox-content" id="lightbox-img" src="">
+                </div>
+                
+
+  <!-- How It Works -->
+<section class="how-it-works py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">How It Works</h2>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5>1. Choose Your Gear</h5>
+        <p>Select from a range of DJ equipment types.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>2. Customize Your Skin</h5>
+        <p>Pick colors, patterns, or upload your own design.</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>3. Place Your Order</h5>
+        <p>We print and ship directly to your setup!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials py-5 bg-dark text-white text-center">
+  <div class="container">
+    <h2 class="mb-4">What DJs Say</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active fade-carousel">
+          <img src="Images/dj 1.jpg" class="rounded-circle mb-3 testimonial-img" alt="DJ Venom">
+          <blockquote class="blockquote">
+            <p>“Game changer. My decks finally match my energy.”</p>
+            <footer class="blockquote-footer text-white-50">DJ Venom</footer>
+            <div class="stars mt-2">⭐⭐⭐⭐⭐</div>
+          </blockquote>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item fade-carousel">
+          <img src="Images/dj 2.jpg" class="rounded-circle mb-3 testimonial-img" alt="DJ Karma">
+          <blockquote class="blockquote">
+            <p>“Best quality I've seen. The fit and finish is 🔥.”</p>
+            <footer class="blockquote-footer text-white-50">DJ Karma</footer>
+            <div class="stars mt-2">⭐⭐⭐⭐⭐</div>
+          </blockquote>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item fade-carousel">
+          <img src="Images/dj 3.jpg" class="rounded-circle mb-3 testimonial-img" alt="DJ Pulse">
+          <blockquote class="blockquote">
+            <p>“Customization was smooth, and the delivery was fast. Love the vibe!”</p>
+            <footer class="blockquote-footer text-white-50">DJ Pulse</footer>
+            <div class="stars mt-2">⭐⭐⭐⭐</div>
+          </blockquote>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+                    <!-- Contact Us Section   -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <p class="text-center">Have questions, custom requests, or just want to say hey? Drop us a message!</p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Tell us what you're thinking..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+<footer class="site-footer bg-dark text-white pt-5 pb-3">
+  <div class="container">
+    <div class="row g-4">
+      <!-- About -->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="mb-3">About DJ Skins</h5>
+        <p>We specialize in high-quality custom wraps for turntables, mixers, and DJ controllers — crafted to inspire creativity and performance.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#shop" class="text-white-50 text-decoration-none">Shop</a></li>
+          <li><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
+          <li><a href="#gallery" class="text-white-50 text-decoration-none">Gallery</a></li>
+          <li><a href="#contact" class="text-white-50 text-decoration-none">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-12">
+        <h5 class="mb-3">Get in Touch</h5>
+        <p><strong>Email:</strong> support@djskins.com</p>
+        <p><strong>Phone:</strong> +254 700 123456</p>
+        <div class="social-icons mt-3">
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light mt-4" />
+    <div class="text-center text-white-50">
+      &copy; 2025 DJ Skins. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+  
+  <!-- Back to Top Button -->
+<button id="backToTopBtn" title="Go to top">
+  ↑
+</button>
+<script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
+  <script src="cart.js"></script>
+
+</body>
+</html>

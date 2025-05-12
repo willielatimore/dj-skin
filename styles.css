@@ -1,0 +1,729 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .bg-gradient {
+    background: linear-gradient(135deg, #111, #1f1f1f);
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in-out;
+  }
+  /* Navigation Bar Section */
+  .custom-navbar {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    border-bottom: 1px solid #333;
+  }
+  
+  .navbar-brand {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav-link {
+    color: #ccc !important;
+    transition: 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #fff !important;
+    border-bottom: 2px solid #fff;
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url('Images/Hero\ background.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: -1;
+  }
+
+  .category-btn {
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    transition: 0.3s ease;
+  }
+  
+  .category-btn:hover,
+  .category-btn.active {
+    background-color: #ffffff;
+    color: #111 !important;
+  }
+  
+  .product-card {
+    transition: all 0.3s ease;
+  }
+  
+  
+  
+  /* About Page*/
+  .about-us {
+    background-color: #111;
+    color: #f5f5f5;
+    border-left: 6px solid #ff0055;
+    padding: 60px 0;
+  }
+  
+  .about-us h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .about-us p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  /* Hero Section About Page */
+.about-hero {
+  position: relative;
+  height: 65vh;
+  background: url('Images/Hero\ background\ 2.jpeg') center center / cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+.about-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  animation: fadeUp 1s ease;
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  animation: fadeUp 1.2s ease;
+}
+
+/* CTA Button */
+.about-hero .btn {
+  animation: fadeUp 1.4s ease;
+  border: 2px solid #fff;
+  padding: 0.75rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.about-hero .btn:hover {
+  background-color: #ff0055;
+  border-color: #ff0055;
+  color: #fff;
+}
+
+  
+  /* Team Section */
+  .team {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .team h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .team img {
+    border: 4px solid #ff0055;
+    transition: transform 0.3s ease;
+  }
+  
+  .team img:hover {
+    transform: scale(1.05);
+  }
+  
+  .team h5 {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .team p {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+/* === Shop Section Styles === */
+#shop {
+  /* background-color: #111; */
+  color: #fff;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+#shop h2 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+/* Category Buttons */
+.category-btn {
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  transition: all 0.3s ease;
+  border-color: #fff;
+  color: #fff;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Search & Sort Inputs */
+#search-bar,
+#sort-select {
+  background-color: #222;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+#search-bar::placeholder {
+  color: #aaa;
+}
+
+#sort-select option {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Product Cards */
+.product-card .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.product-card img {
+  object-fit: cover;
+  max-height: 250px;
+  border-bottom: 1px solid #333;
+}
+
+.product-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+  /* Features Section */
+.features h2 {
+  font-weight: bold;
+}
+
+.feature-item {
+  background-color: #1a1a1a;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Why Choose Us Section with Background */
+.why-choose-us {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+              url('Images/why\ choose\ us\ bg.jpeg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+.why-choose-us h2 {
+  font-weight: bold;
+}
+
+.choose-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.choose-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+  /* GALLERY SECTION STYLES */
+.gallery-preview {
+  background-color: #111;
+  padding: 4rem 0;
+  color: #fff;
+}
+
+.gallery-preview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.gallery-preview img {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-preview img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* LIGHTBOX STYLES */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.95);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  animation: zoom 0.3s ease-in-out;
+}
+
+
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lightbox .close:hover {
+  color: #ccc;
+}
+
+
+  /* How it works Section */
+  .how-it-works {
+    background-image: url('Images/How\ it\ works\ bg.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  /* Dark overlay for readability */
+  .how-it-works::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+  
+  .how-it-works .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Title styling */
+  .how-it-works h2 {
+    font-size: 2.8rem;
+    color: #00f8ff;
+    text-shadow: 0 0 10px #00f8ff;
+    animation: fadeInDown 1s ease;
+  }
+  
+  /* Step titles */
+  .how-it-works h5 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Paragraphs */
+  .how-it-works p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+  
+  /* Card-like appearance */
+  .how-it-works .col-md-4 {
+    background-color: rgba(30, 34, 38, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .how-it-works .col-md-4:hover {
+    transform: translateY(-10px);
+  }
+  
+ 
+ 
+
+
+
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #111;
+}
+
+.testimonial-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+/* Star ratings */
+.stars {
+  font-size: 1.2rem;
+  color: gold;
+}
+
+/* Fade animation for carousel */
+.fade-carousel {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.carousel-item.active.fade-carousel {
+  opacity: 1;
+}
+
+.testimonials blockquote {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  padding: 0.75rem;
+}
+
+
+  /* Contact Section */
+  #contact {
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  #contact form {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+/* Footer */
+.site-footer {
+  font-size: 0.95rem;
+  background-color: #111;
+}
+
+.site-footer h5 {
+  font-weight: bold;
+}
+
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.site-footer .social-icons a {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+  color: #f0f0f0;
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  z-index: 999;
+  font-size: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#backToTopBtn:hover {
+  background-color: #333;
+}
+
+
+  
+  /* Animate sections on load About Page*/
+  .about-us,
+  .team {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+  }
+  
+  /* Add slight delays for inner elements About Page */
+  .about-us p,
+  .team .col-md-4 {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+  }
+  
+  /* Trigger animations on scroll with a delay (progressive) */
+  .team .col-md-4:nth-child(1) { animation-delay: 0.4s; }
+  .team .col-md-4:nth-child(2) { animation-delay: 0.6s; }
+  .team .col-md-4:nth-child(3) { animation-delay: 0.8s; }
+  
+  /* Smooth scale on hover (already in place, extending) */
+  .team img:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+/* Cart Page Styling */
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  padding: 2rem 1rem;
+}
+
+h2, h4 {
+  color: #00ffe1;
+  text-shadow: 0 0 5px #00ffe1;
+}
+
+#cart-items .list-group-item {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#cart-items .list-group-item:hover {
+  background-color: #262626;
+  transform: scale(1.02);
+}
+
+#cart-items .btn-danger {
+  background-color: #ff004f;
+  border: none;
+  font-size: 0.875rem;
+}
+
+#cart-items .btn-danger:hover {
+  background-color: #ff3366;
+}
+
+#total {
+  font-weight: bold;
+  color: #00ffe1;
+  margin-top: 20px;
+  text-shadow: 0 0 5px #00ffe1;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.back-btn {
+  margin-top: 2rem;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: #00ffe1;
+  font-weight: bold;
+}
+
+.back-btn a:hover {
+  text-decoration: underline;
+}
+/* Neon Checkout Button */
+.btn-neon {
+  background-color: transparent;
+  color: #00ffe1;
+  border: 2px solid #00ffe1;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px #00ffe1;
+}
+
+.btn-neon:hover {
+  background-color: #00ffe1;
+  color: #000;
+  box-shadow: 0 0 15px #00ffe1, 0 0 25px #00ffe1;
+  transform: scale(1.05);
+}
+
+
+/* Admin Page Styles */
+.admin-page form input,
+.admin-page form select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.admin-page form label {
+  color: #ddd;
+}
+
+.admin-page button {
+  border-color: #fff;
+}
+
+  
+  /* Fade-up Animation About page */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Fade-in Animation for Gallery Section */
+@media (max-width: 767px) {
+  .gallery-preview img {
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes zoom {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Animations How it works Section */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive padding adjustment */
+@media (max-width: 767px) {
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+  .how-it-works .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
